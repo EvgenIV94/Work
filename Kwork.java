@@ -1,5 +1,7 @@
 package KWork;
 
+import java.util.Arrays;
+
 public class Kwork {
     public static void main(String[] args) {
         // 1. Создать репозиторий на GitHub
@@ -20,14 +22,36 @@ public class Kwork {
         String[] arr3 = {"Russia", "Denmark", "Kazan"};
 
         int sum = 0;
-        for (int i = 0; i < arr1.length; i++) {
-            if (arr1[i].length() <= 3){
+        for (int i = 0; i < arr1.length; i++) {             // Замените arr1 на arr2 или arr3 для проверки
+            if (arr1[i].length() <= 3){                     // И здесь :)
                 sum ++;
             }
         }
 
         String[] resArr = new String[sum];
+        int k = 0;
 
-        
+        for (int i = 0; i < arr1.length; i++) {
+            if (arr1[i].length() <= 3){
+                resArr[k] = arr1[i];
+                k++;
+            }
+        }
+
+        // for (int i = 0; i < arr2.length; i++) {           // Раскомментируйте этот участок кода для проверки arr2
+        //     if (arr2[i].length() <= 3){
+        //         resArr[k] = arr2[i];
+        //         k++;
+        //     }
+        // }
+
+        // for (int i = 0; i < arr3.length; i++) {          // Раскомментируйте этот участок кода для проверки arr3
+        //     if (arr3[i].length() <= 3){
+        //         resArr[k] = arr3[i];
+        //         k++;
+        //     }
+        // }
+
+        System.out.println(Arrays.toString(resArr));
     }
 }
