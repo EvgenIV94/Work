@@ -19,5 +19,15 @@ public class Kwork {
         String[] arr2 = {"1234", "1567", "-2", "computer science"};
         String[] arr3 = {"Russia", "Denmark", "Kazan"};
 
+        int sum = 0;
+        for (int i = 0; i < arr1.length; i++) {
+            if (arr1[i].length() <= 3){
+                sum ++;
+            }
+        }
+
+        String[] resArr = new String[sum];
+
+        
     }
 }
